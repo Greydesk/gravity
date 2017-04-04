@@ -15,7 +15,7 @@ public class SimplePendulum extends AbstractPendulum {
      * inTheta0: angular displacement at t=0 (0<=theta0<=pi/6)
      */
 //    public SimplePendulum (double inLength, double inMass, double inTheta0) {
-    public SimplePendulum (double inLength, double inMass, double inTheta0, double inG) {
+    public SimplePendulum (double inLength, double inMass, double inTheta0, GravityModel inG) {
 //	super (inLength, inMass, inTheta0);
 	super (inLength, inMass, inTheta0, inG);
 	angularFrequency = Math.sqrt (this.getGravitationalField () / this.getStringLength ());
