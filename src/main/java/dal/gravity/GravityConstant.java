@@ -10,4 +10,7 @@ public class GravityConstant implements GravityModel{
 		// TODO Auto-generated method stub
 		return Gravity;
 	}
+	public void changeGravitationalConstant(double inG){
+		this.Gravity=inG;
+	}
 }

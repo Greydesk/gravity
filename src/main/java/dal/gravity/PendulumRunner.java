@@ -35,11 +35,13 @@ public class PendulumRunner {
     	}
     	iterations = (int) (1/delta);
     	System.out.println("Change Gravity to 25m/s^2");
-    	System.out.println ("analytical vs. numerical displacement (fine, coarse)");
     	Gravity = new GravityConstant(25);
-    	rp = new RegularPendulum (sLen, pMass, theta0, delta, Gravity);
-    	sp = new SimplePendulum (sLen, pMass, theta0, Gravity);
-    	rpCoarse = new RegularPendulum (sLen, pMass, theta0, .1, Gravity);
+    	rp.changeGravityModel(Gravity);
+    	sp.changeGravityModel(Gravity);
+    	rpCoarse.changeGravityModel(Gravity);
+//    	rp = new RegularPendulum (sLen, pMass, theta0, delta, Gravity);
+//    	sp = new SimplePendulum (sLen, pMass, theta0, Gravity);
+//    	rpCoarse = new RegularPendulum (sLen, pMass, theta0, .1, Gravity);
     	
     	for (int second = 11; second <= 20; second++) {
     		for (int i = 0; i < iterations; i++) rp.step ();
